@@ -26,11 +26,13 @@ def lvl(s):
 
 def get_headers(filename, lines):
     '''
-    Generates reStructuredText headers in format:
-    line_index, header_level, header_text
+    Gets tuples in format
+    ((x1, y1, x2, y2), level, title, icon)
     '''
+    r = []
     for n,i in enumerate(lines):
         if is_arr(i):
             if n>0:
                 if 0<len(lines[n-1])<=len(i):
-                    yield (n-1,lvl(i[0]),lines[n-1])
+                    r.append( ((0, n-1, 0, n), lvl(i[0]), lines[n-1], -1) )
+    return r

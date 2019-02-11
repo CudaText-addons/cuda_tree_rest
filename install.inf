@@ -1,6 +1,6 @@
 [info]
 title=TreeHelper for reStructuredText
-desc=TreeHelper for CudaTree, adds support for reStructuredText lexer
+desc=TreeHelper for reStructuredText lexer
 type=cudatext-plugin
 subdir=cuda_tree_rest
 homepage=https://github.com/medvosa/cuda_tree_rest
